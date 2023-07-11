@@ -21,7 +21,7 @@ const LinkSchema = new Schema(
 
 LinkSchema.pre("save", function () {
   this.shortLink = nanoId.nanoid(10);
-  this.fullLink = `localhost:9000/${this.shortLink}`;
+  this.fullLink = `https://mak-k2vs.onrender.com/${this.shortLink}`;
 });
 
 module.exports = model("Link", LinkSchema);
